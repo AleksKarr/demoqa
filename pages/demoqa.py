@@ -20,10 +20,5 @@ class DemoQa(BasePage):
     def click_on_the_btn(self):
             self.find_element(locator="div.card.mt-4.top-card").click()
 
-    def equal_url(self):
-        if self.get_url() == self.base_url:
-            return True
-        else:
-            return False
-        pass
+
 
