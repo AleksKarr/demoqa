@@ -23,7 +23,11 @@ class WebElement:
             return False
         return True
 
+    # def visible(self):
+    #     return self.find_element().is_displayed()
+
     def visible(self):
-        return self.find_element().is_displayed()
-
-
+        try:
+            return self.find_element().is_displayed()
+        except NoSuchElementException:
+            return False
