@@ -91,3 +91,6 @@ class WebElement:
             "window.scrollTo(0, document.body.scrollHeight);" ,
             self.find_element()
         )
+
+    def get_attribute(self, name):
+        return self.find_element().get_attribute(name)
