@@ -22,8 +22,12 @@ class WebElement:
     def find_elements(self):
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
+    # def click(self):
+    #     self.find_element().click()
+
     def click(self):
-        self.find_element().click()
+        element = self.find_element()
+        self.driver.execute_script("arguments[0].click();", element)
 
     def visible(self):
         try:
