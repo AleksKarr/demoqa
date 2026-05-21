@@ -16,7 +16,7 @@ def test_navigation_modal(browser):
     modal_dialogs_page.visit()
     modal_dialogs_page.refresh()
 
-    modal_dialogs_page.icon.click()
+    modal_dialogs_page.icon.click_force()
     modal_dialogs_page.back()
 
     browser.set_window_size(900, 400)

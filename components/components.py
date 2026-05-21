@@ -22,12 +22,12 @@ class WebElement:
     def find_elements(self):
         return self.driver.find_elements(By.CSS_SELECTOR, self.locator)
 
-    # def click(self):
-    #     self.find_element().click()
-
     def click(self):
-        element = self.find_element()
-        self.driver.execute_script("arguments[0].click();", element)
+        self.find_element().click()
+
+
+    def click_force(self):
+            self.driver.execute_script("arguments[0].click();", self.find_element())
 
     def visible(self):
         try:
@@ -41,4 +41,7 @@ class WebElement:
         return False
     def send_keys(self, text: str):
         self.find_element().send_keys(text)
+
+    def click_force(self):
+        self.driver.execute_script("arguments[0].click();", self.find_element())
 
