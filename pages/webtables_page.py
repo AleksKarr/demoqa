@@ -6,7 +6,7 @@ class WebTablesPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver, "https://demoqa.com/webtables")
 
-        self.rows_select = WebElement(driver, "select[aria-label='rows per page']", "css")
+        
         self.add_button = WebElement(driver, "#addNewRecordButton", "css")
         self.modal_dialog = WebElement(driver, "#registration-form-modal", "css")
         self.submit_button = WebElement(driver, "#submit", "css")
