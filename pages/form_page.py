@@ -18,4 +18,12 @@ class FormPage(BasePage):
         self.btn_close_modal = WebElement(driver, '#closeLargeModal')
         self.hobbies = WebElement(driver, '#hobbies-checkbox-1')
         self.current_address = WebElement(driver, '#currentAddress')
+        self.user_form = WebElement(driver, '#userform')
+
+        self.btn_state = WebElement(driver, '#state')
+        self.ipn_state = WebElement(driver, '#react-select-3-input')
+
+        self.btn_NCR = WebElement(driver, "//*[contains(text), 'NCR')]", 'xpath')
+        
+
 
