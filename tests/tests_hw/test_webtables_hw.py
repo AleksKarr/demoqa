@@ -37,3 +37,6 @@ def test_webtables_crud(browser):
     time.sleep(1)
 
     assert not page.modal_dialog.visible()
+
+
+
