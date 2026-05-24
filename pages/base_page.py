@@ -1,5 +1,7 @@
-from selenium.webdriver.common.by import By
+# from selenium.webdriver.common.by import By
 import time
+import logging
+
 
 class BasePage:
 
@@ -33,3 +35,10 @@ class BasePage:
                 return True
             else:
                 return False
+
+    def alert(self):
+       try:
+           return self.driver.switch_to.alert
+       except Exeption as ex:
+       logging.log(1, ex)
+            return False
