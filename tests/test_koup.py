@@ -1,4 +1,4 @@
-from pages.koup_page import Koup
+from pages.koup import Koup
 from pages.koup_add import KoupAdd
 
 def test_koup_add(browser):
@@ -12,27 +12,27 @@ def test_koup_add(browser):
 
     assert koup_add.btn_add.get_text() == 'Add Elements'
 
-    assert koup_add.btn_add.get_dom_attribute('onclick') == 'Add Elements'
+    assert koup_add.btn_add.get_dom_attribute('onclick') == 'аddElement()'
 
     """When Кликнуть на кнопку 4 раза"""
-    for i in range(4)
+    for i in range(4):
         koup_add.btn_add.click()
 
         assert koup_add.btns_delete.check_count_elements(4)
 
         # проверка всех элементов
-        for element in koup_add.btns_delete.find_elements()
+        for element in koup_add.btns_delete.find_elements():
             assert element.text == 'Delete'
 
         # проверка только для первого элемента
         assert koup_add.btns_delete.get_text() == 'Delete'
 
-        """When Кликнуть на каждую кнопку "Delete""""
-        while koup_add.btns_delete.exist()
+        """When Кликнуть на каждую кнопку "Delete"""
+        while koup_add.btns_delete.exist():
             koup_add.btns_delete.click()
 
         assert not koup_add.btns_delete.exist()
-        
+
 
 
 

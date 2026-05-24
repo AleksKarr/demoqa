@@ -100,3 +100,5 @@ class WebElement:
 
     def alert(self):
         return self.driver.switch_to.alert
+
+    
