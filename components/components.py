@@ -94,3 +94,9 @@ class WebElement:
 
     def get_attribute(self, name):
         return self.find_element().get_attribute(name)
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
+
+    def alert(self):
+        return self.driver.switch_to.alert
