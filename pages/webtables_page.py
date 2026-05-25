@@ -6,7 +6,7 @@ class WebTablesPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver, "https://demoqa.com/webtables")
 
-        
+
         self.add_button = WebElement(driver, "#addNewRecordButton", "css")
         self.modal_dialog = WebElement(driver, "#registration-form-modal", "css")
         self.submit_button = WebElement(driver, "#submit", "css")
@@ -22,3 +22,10 @@ class WebTablesPage(BasePage):
         self.previous_button = WebElement(driver, "#previous-page", "css")
         self.page_info = WebElement(driver, ".-pageInfo", "css")
         self.page_jump = WebElement(driver, "input[aria-label='jump to page']", "css")
+
+        self.first_name_header = WebElement(driver, ".rt-th:nth-child(1)", "css")
+        self.last_name_header = WebElement(driver, ".rt-th:nth-child(2)", "css")
+        self.age_header = WebElement(driver, ".rt-th:nth-child(3)", "css")
+        self.email_header = WebElement(driver, ".rt-th:nth-child(4)", "css")
+        self.salary_header = WebElement(driver, ".rt-th:nth-child(5)", "css")
+        self.department_header = WebElement(driver, ".rt-th:nth-child(6)", "css")
