@@ -22,7 +22,7 @@ class BasePage:
         self.driver.refresh()
 
     def title(self):
-        self.driver.title
+        self.driver.title()
 
     def find_element(self, locator):
         return self.driver.find_element(By.CSS_SELECTOR, locator)
