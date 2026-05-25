@@ -1,13 +1,10 @@
 from pages.demoqa import DemoQa
-
+from pages.elements_page import ElementsPage
 
 def test_check_text(browser):
     demo_qa_page = DemoQa(browser)
     demo_qa_page.visit()
-    assert demo_qa_page.footer.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
-
-from pages.demoqa import DemoQa
-from pages.elements_page import ElementsPage
+    assert demo_qa_page.footer.get_text() == '© 2013-2026 TOOLSQA.COM | ALL RIGHTS RESERVED.'
 
 
 def test_go_to_page_element(browser):
